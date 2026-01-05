@@ -1,0 +1,196 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(
+        to bottom,
+        #FF9933 0%,
+        #FF9933 33%,
+        white 33%,
+        white 66%,
+        #138808 66%,
+        #138808 100%
+    );
+}
+
+
+header {
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+header p {
+    margin-top: 0;
+    font-size: 15px;
+}
+
+
+.upload {
+    text-align: center;
+    margin: 20px;
+}
+
+button {
+    padding: 10px 16px;
+    margin: 5px;
+    background: #000080;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #000060;
+}
+
+
+.files {
+    background: white;
+    max-width: 600px;
+    margin: auto;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+li {
+    margin: 10px 0;
+}
+.file-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.file-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.file-card p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.file-card a {
+    display: inline-block;
+    margin-right: 8px;
+    color: navy;
+    text-decoration: none;
+}
+
+.file-card button {
+    background: crimson;
+}
+.progress-box {
+    width: 100%;
+    max-width: 400px;
+    margin: 15px auto;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+#progressBar {
+    height: 12px;
+    width: 0%;
+    background: linear-gradient(to right, #FF9933, #138808);
+    transition: width 0.2s;
+}
+
+#progressText {
+    position: absolute;
+    width: 100%;
+    top: -22px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+.preview-img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.file-name {
+    font-weight: bold;
+    margin-bottom: 8px;
+    word-break: break-all;
+}
+/* Dark Mode Styles */
+.dark-mode {
+    background: #121212;
+    color: #f1f1f1;
+}
+
+.dark-mode header {
+    background: #1e1e1e;
+}
+
+.dark-mode .files {
+    background: #1e1e1e;
+}
+
+.dark-mode .file-card {
+    background: #2a2a2a;
+    color: #f1f1f1;
+}
+
+.dark-mode a {
+    color: #4da3ff;
+}
+
+#themeToggle {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.file-card button {
+    margin: 5px;
+}
+#lockScreen {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #FF9933, white, #138808);
+}
+
+#lockScreen input {
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+}
+.file-card {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.file-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+.upload {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 500px;
+}

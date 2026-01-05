@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bharat File Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <button onclick="logout()">Logout</button>
+
+</head>
+<body>
+
+<!-- PASSWORD SCREEN -->
+<div id="lockScreen">
+    <h2>🔐 Enter Password</h2>
+    <input type="password" id="passwordInput" placeholder="Enter password">
+    <br><br>
+    <button onclick="checkPassword()">Unlock</button>
+    <p id="errorMsg" style="color:red;"></p>
+</div>
+
+<!-- MAIN APP (HIDDEN FIRST) -->
+<div id="appContent" style="display:none;">
+
+    <header>
+        <h1>Bharat File Manager 🇮🇳</h1>
+        <p>Upload • Download • Delete (Max 10 MB)</p>
+        <button id="themeToggle" onclick="toggleTheme()">🌙 Dark Mode</button>
+    </header>
+    
+    <section style="text-align:center; margin:15px;">
+    <h3>Change Password</h3>
+    <input type="password" id="oldPass" placeholder="Old password">
+    <br><br>
+    <input type="password" id="newPass" placeholder="New password">
+    <br><br>
+    <button onclick="changePassword()">Update Password</button>
+    <p id="passMsg" style="color:green;"></p>
+</section>
+
+
+    <section class="upload">
+        <input type="file" id="fileInput">
+        <button onclick="addFile()">Add File</button>
+
+        <div class="progress-box">
+            <div id="progressBar"></div>
+            <span id="progressText">0%</span>
+        </div>
+    </section>
+
+    <section class="files">
+        <h2>Your Files</h2>
+        <div id="fileList" class="file-grid"></div>
+    </section>
+    
+    <footer style="text-align:center; padding:15px; font-size:14px;">
+    © 2026 | Created by <strong>Udit Narayan Mohanty</strong><br>
+    Bharat File Manager — All rights reserved
+</footer>
+
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
